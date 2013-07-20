@@ -1,10 +1,11 @@
 Vai Chover! Recife
 ==================
 
-**App**: Vai Chover! Recife  
-**Plataformas Suportadas**: Web, Android, Firefox OS  
+![](https://github.com/adrielcafe/VaiChoverRecife/blob/master/images/vai_chover.png)
+
 **Autor**: Adriel Café  
 **E-mail**: ac@adrielcafe.com  
+**Plataformas Suportadas**: Web, Android, Firefox OS  
 
 Vai Chover! Recife é um aplicativo que alerta a população do Recife sobre perigosas mudanças climáticas.  
 
