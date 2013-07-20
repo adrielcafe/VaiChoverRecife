@@ -6,6 +6,7 @@ Vai Chover! Recife
 **Autor**: Adriel Café  
 **E-mail**: ac@adrielcafe.com  
 **Plataformas Suportadas**: Web, Android, Firefox OS  
+**Licença**: GPL v3  
 
 Vai Chover! Recife é um aplicativo que alerta a população do Recife sobre perigosas mudanças climáticas.  
 
