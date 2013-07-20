@@ -1,0 +1,52 @@
+[
+	{
+		"title": "Recife (Várzea)",
+		"lat": -8.05920, 
+		"lng": -34.95190
+	},
+	{
+		"title": "Recife - PCD",
+		"lat": -8.06440, 
+		"lng": -34.92470
+	},
+	{
+		"title": "Recife (Codecipe / Santo Amaro)",
+		"lat": -8.04420,
+		"lng": -34.87470
+	},
+	{
+		"title": "Recife (IPA)",
+		"lat": -8.06440,
+		"lng": -34.92440
+	},
+	{
+		"title": "Recife (Jardim Monte Verde)",
+		"lat": -8.11890, 
+		"lng": -34.96060
+	},
+	{
+		"title": "Recife (Alto da Brasileira)",
+		"lat": -8.00140,
+		"lng": -34.93530
+	},
+	{
+		"title": "Recife (Caxangá)",
+		"lat": -8.05000,
+		"lng": -34.91670
+	},
+	{
+		"title": "Recife (Lamepe/Itep)",
+		"lat": -8.05030, 
+		"lng": -34.88420
+	},
+	{
+		"title": "Recife (Santo Amaro)",
+		"lat": -8.05030, 
+		"lng": -34.88420
+	},
+	{
+		"title": "Recife (Ibura)",
+		"lat": -8.11670, 
+		"lng": -34.93330
+	}
+]

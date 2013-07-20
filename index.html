@@ -1,0 +1,209 @@
+<!DOCTYPE html> 
+<html manifest="vaichover.appcache">
+<head>
+	<title>Vai Chover! Recife</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type='text/css' href="css/normalize.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.css" />
+	<link rel="stylesheet" type='text/css' href="css/leaflet.css" />
+	<link rel="stylesheet" type='text/css' href="css/app.css" />
+	
+	<script type='text/javascript'>
+		var isFirefoxOS = navigator.userAgent.toLowerCase().indexOf('firefox') > -1 && navigator.userAgent.toLowerCase().indexOf('mobile') > -1;
+		var isPhoneGap = 'connection' in navigator;
+	</script>
+
+	<!-- PHONEGAP 
+    <script type='text/javascript' src="cordova.js" charset="utf-8"></script>
+    <script type='text/javascript' src="backgroundService.js"></script>
+    <script type='text/javascript' src="vaiChoverService.js"></script>
+	<script type='text/javascript' src="cdv-plugin-fb-connect.js"></script>
+	<script type='text/javascript' src="facebook-js-sdk.js"></script>-->
+
+	<script type='text/javascript' src="js/jquery.js"></script>
+	<script type='text/javascript' src="js/jquery.mobile.js"></script>
+	<script type='text/javascript' src="js/jquery.dateFormat.js"></script>
+	<script type='text/javascript' src="js/leaflet.js"></script>
+	<script type='text/javascript' src="js/maps.js"></script>
+	<script type='text/javascript' src="js/facebook.js"></script>
+	<script type='text/javascript' src="js/app.js"></script>
+</head> 
+<body> 
+	<div class="ui-loader-background"></div>
+
+	<!-- PAGES -->
+	<!-- Page Home -->
+	<div id="pageHome" data-role="page">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#dlgSobre" data-role="button" data-rel="dialog" data-transition="flip" data-icon="info" data-iconpos="notext">Sobre</a>
+			<h1 class="app-title">Vai Chover! Recife</h1>
+			<a href="#dlgConfig" data-role="button" data-rel="dialog" data-transition="flip" data-icon="gear" data-iconpos="notext" style="display: none;">Preferências</a>
+		</div>
+		<div data-role="content">
+	        <div class="logo-vai-chover">
+	        	<img src="images/vai_chover.png">
+	        </div>
+
+	        <a href="#" id="openDlgAlerta" data-role="button" data-rel="dialog" data-transition="flip">Vai Chover?</a>
+	        
+			<a href="#pageRegions" data-role="button" data-transition="slide">Regiões do Recife</a>
+
+        	<a href="#" id="installFirefoxOS" data-role="button" style="display: none;">Instalar no meu Firefox OS</a>
+
+			<!-- Popup Install -->
+			<div id="popInstall" class="ui-content" data-role="popup" data-transition="slidedown" data-overlay-theme="a" data-position-to="window" data-history="false">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<h2>Instale o <span style="color: #0093EA;">Vai Chover! Recife</span> no seu smartphone!</h2>
+				<div style="text-align: center;">
+					<a href="https://play.google.com/store/apps/details?id=com.adrielcafe.vaichoverrecife" target="_blank"><img src="images/android.png"></a>
+					<a href="https://marketplace.firefox.com/app/vaichoverrecife/" target="_blank"><img src="images/firefoxos.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Regions -->
+	<div id="pageRegions" data-role="page">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext">Voltar</a>
+			<h1 class="app-title">Regiões do Recife</h1>
+			<a href="#popRegions" data-role="button" data-rel="popup" data-icon="star" data-iconpos="notext">Legenda</a>
+		</div>
+        <div data-role="content">
+            <div id="mapRegions"></div>
+
+			<!-- Popup Install -->
+			<div id="popRegions" data-role="popup" data-transition="slidedown" data-overlay-theme="a" data-position-to="window" data-history="false">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<h2>Legenda</h2>
+				<ul>
+					<li>
+						<img src="css/images/marker-icon.png">
+						Postos Pluviométricos 
+					</li>
+					<li>
+						<div style="background-color: #2e00ff;"></div>
+						Região Centro
+					</li>
+					<li>
+						<div style="background-color: #00f2ff;"></div>
+						Região Norte
+					</li>
+					<li>
+						<div style="background-color: #27d800;"></div>
+						Região Nordeste
+					</li>
+					<li>
+						<div style="background-color: #e2ea00;"></div>
+						Região Oeste
+					</li>
+					<li>
+						<div style="background-color: #ff9000;"></div>
+						Região Sudeste
+					</li>
+					<li>
+						<div style="background-color: #ff0000;"></div>
+						Região Sul
+					</li>
+				</ul>
+			</div>
+        </div>
+	</div>
+	
+	<!-- DIALOGS -->
+	<!-- Dialog Alerta -->
+	<div id="dlgAlerta" data-role="dialog">
+		<div data-role="header">
+	        <h1>Último Alerta</h1>
+	    </div>
+	    <div data-role="content">
+	    	<h4 id="alertaExpirado" style="display: none;">Alerta Expirado</h4>
+
+	        <p style="margin-top: 0; font-weight: bold">AVISO HIDROMETEOROLÓGICO Nº <span id="alert-number"></span></p>
+        	<div id="alert-date"></div>
+        	<div id="alert-rainForce"></div>
+	        <p id="alert-detail"></p>
+	        <div>
+	        	<strong>Regiões Atingidas:</strong>
+	        	<ul id="alert-regions"></ul>
+	        </div>
+	        <p><strong>Fonte:</strong> APAC - Agência Pernambucana de Águas e Clima</p>
+	        <a href="#" id="openPDF" data-role="button">Alerta Oficial <img src="images/pdf.png"></a>
+	        <a href="#" id="shareFacebook" data-role="button">Compartilhar <img src="images/facebook.png"></a>
+	        <a href="#" id="shareTwitter" data-role="button">Compartilhar <img src="images/twitter.png"></a>
+	        <br>
+	        <hr>
+	        <a href="#" data-role="button" data-rel="back">Fechar</a>
+	    </div>
+	</div>
+	<!-- Dialog Mensagem -->
+	<div id="dlgMsg" data-role="dialog">
+		<div data-role="header">
+	        <h1>Aviso</h1>
+	    </div>
+	    <div data-role="content">
+	        <p id="msg"></p>
+	        <br>
+	        <hr>
+	        <a href="#" data-role="button" data-rel="back">Fechar</a>
+	    </div>
+	</div>
+	<!-- Dialog Sobre -->
+	<div id="dlgSobre" data-role="dialog" data-rel="back">
+		<div data-role="header">
+	        <h1>Sobre</h1>
+	    </div>
+	    <div data-role="content">
+	        <div class="logo-vai-chover">
+	        	<img src="images/vai_chover.png">
+	        </div>
+	        <h2>Desenvolvedor</h2>
+	        <div class="about-desc">
+				<img src="images/developer.png"><div>Adriel Café</div><br>
+				<img src="images/email.png"><div>ac@adrielcafe.com</div><br>
+				<img src="images/facebook.png"><div>/adrielcafe</div><br>
+				<img src="images/twitter.png"><div>@adrielcafe</div><br>
+				<img src="images/skype.png"><div>adrielcafe</div><br>
+			</div>
+	        <h2>Apoio</h2>
+	        <div style="text-align: center;">
+		        <img src="images/apac.png">
+		    </div>
+	    </div>
+	</div>
+	<!-- Dialog Config -->
+	<div id="dlgConfig" data-role="dialog">
+		<div data-role="header">
+	        <h1>Preferências</h1>
+	    </div>
+	    <div data-role="content">
+	        <form id="form-cfg">
+	        	<input type="checkbox" name="cfg-notify" id="cfg-notify" class="custom" />
+			   	<label for="cfg-notify">Receber Notificações</label>
+			   	
+			   	<fieldset id="cfg-update-frequency" data-role="controlgroup">
+					<legend>Frequência de Atualização</legend>
+				    <input type="radio" name="cfg-update-frequency" id="cfg-update-frequency-30" value="30"/>
+				    <label for="cfg-update-frequency-30">30 Minutos</label>
+
+				    <input type="radio" name="cfg-update-frequency" id="cfg-update-frequency-60" value="60"/>
+				    <label for="cfg-update-frequency-60">1 Hora</label>
+
+				    <input type="radio" name="cfg-update-frequency" id="cfg-update-frequency-240" value="240" />
+				    <label for="cfg-update-frequency-240">4 Horas</label>
+
+				    <input type="radio" name="cfg-update-frequency" id="cfg-update-frequency-480" value="480" />
+			    	<label for="cfg-update-frequency-480">8 Horas</label>
+				</fieldset>
+				<br>
+				<hr>
+				<button>Salvar</button>
+	        </form>
+	    </div>
+	</div>
+</body>
+</html>

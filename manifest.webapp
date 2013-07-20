@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "Vai Chover! Recife",
+    "description": "Vai Chover! Recife",
+    "developer": {
+        "name": "Adriel Café",
+        "url": "http://adrielcafe.com"
+    },
+    "launch_path": "/index.html",
+    "installs_allowed_from": ["*"],
+    "default_locale": "pt",
+    "icons": {
+        "16": "/images/icon_16.png",
+        "48": "/images/icon_48.png",
+        "128": "/images/icon_128.png",
+        "256": "/images/icon_256.png",
+        "512": "/images/icon_512.png"
+    },
+    "permissions": {
+        "desktop-notification": { "description": "Exibir alertas de chuvas" }
+    }
+}

@@ -1,0 +1,107 @@
+.ui-header .app-title {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.ui-footer .ui-controlgroup-controls { width: 100%; }
+.ui-footer .ui-btn { width: 49%; }
+.ui-loader-background {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: fixed;
+    z-index: 100;
+}
+.ui-loading .ui-loader-background { display:block; }
+.ui-dialog .ui-title {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.logo-vai-chover { text-align: center; }
+.logo-vai-chover img { max-width: 250px; }
+
+#alertaExpirado {
+	text-align: center;
+	color: #F00 !important;
+	margin-top: 0;
+}
+
+#pageRegions .ui-content {
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 45px !important;
+    right: 0 !important; 
+    bottom: 0 !important;  
+    left: 0 !important;
+}
+
+#openDlgAlerta { margin-top: 30px; }
+
+#installFirefoxOS {
+	background: #E65C2E;
+	color: #FFF;
+	margin-top: 15px;
+}
+
+#dlgAlerta .ui-btn .ui-btn-text { 
+	line-height: 30px; 
+	white-space: normal;
+}
+#dlgAlerta .ui-btn  img,
+#followTwitter img { 
+	width: 30px;
+	float: right; 
+}
+#dlgAlerta #alert-regions {	margin-top: 0; }
+#dlgAlerta #alert-rainForce,
+#dlgAlerta #alert-date {
+	padding-left: 30px;
+	line-height: 25px;
+	height: 25px;
+	margin-top: 5px;
+}
+#dlgAlerta #alert-date { background: url('../images/calendar.png') no-repeat 0 0; }
+#dlgAlerta #alert-rainForce { background: url('../images/water.png') no-repeat 0 0; }
+
+#dlgMsg #msg {
+	text-align: center;
+	font-size: 130%;
+}
+
+#dlgSobre h2 { margin-bottom: 5px; }
+#dlgSobre .about-desc img {
+	padding-right: 10px;
+	float: left;
+}
+#dlgSobre .about-desc div {
+	padding-top: 14px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#popInstall img { 
+	height: 150px; 
+	margin: 15px;
+}
+
+#popRegions ul { 
+	list-style: none; 
+	padding: 0 10px;
+}
+#popRegions ul li {
+	display: block;
+	height: 25px;
+}
+#popRegions ul li img,
+#popRegions ul li div {
+	width: auto;
+	height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+#popRegions ul li img { margin-left: 5px; }
+#popRegions ul li div { width: 20px; }
