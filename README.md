@@ -1,20 +1,20 @@
 Vai Chover! Recife
 ==================
 
-![](https://github.com/adrielcafe/VaiChoverRecife/blob/master/images/vai_chover.png)
+![](https://raw.github.com/adrielcafe/VaiChoverRecife/master/images/vai_chover.png)
 
-**Autor**: Adriel Café  
+**Autor**: Adriel Cafï¿½  
 **E-mail**: ac@adrielcafe.com  
 **Plataformas Suportadas**: Web, Android, Firefox OS  
 
-Vai Chover! Recife é um aplicativo que alerta a população do Recife sobre perigosas mudanças climáticas.  
+Vai Chover! Recife ï¿½ um aplicativo que alerta a populaï¿½ï¿½o do Recife sobre perigosas mudanï¿½as climï¿½ticas.  
 
-Vai Chover! Recife utiliza 3 fontes de dados abertos governamentais distintas. São elas:
-* Os alertas de chuva são dados abertos da APAC (Agência Pernambucana de Águas e Clima) 	fornecidos por um web service inédito que foi solicitado por mim a cerca de 2 semanas atrás.
-* O app exibe em um mapa as regiões do Recife (Região Norte, Sul, Sudeste...) organizados 	por cores. Esses dados estão disponíveis no novo portal de dados abertos da Prefeitura do Recife. 
-* O app exibe em um mapa os postos pluviométricos que são utilizados pela APAC para captar 	os dados climáticos. Essas informações estão disponíveis no portal de dados abertos do 	Governo de Pernambuco.
+Vai Chover! Recife utiliza 3 fontes de dados abertos governamentais distintas. Sï¿½o elas:
+* Os alertas de chuva sï¿½o dados abertos da APAC (Agï¿½ncia Pernambucana de ï¿½guas e Clima) 	fornecidos por um web service inï¿½dito que foi solicitado por mim a cerca de 2 semanas atrï¿½s.
+* O app exibe em um mapa as regiï¿½es do Recife (Regiï¿½o Norte, Sul, Sudeste...) organizados 	por cores. Esses dados estï¿½o disponï¿½veis no novo portal de dados abertos da Prefeitura do Recife. 
+* O app exibe em um mapa os postos pluviomï¿½tricos que sï¿½o utilizados pela APAC para captar 	os dados climï¿½ticos. Essas informaï¿½ï¿½es estï¿½o disponï¿½veis no portal de dados abertos do 	Governo de Pernambuco.
 
-O app foi feito utilizando jQuery Mobile e PhoneGap. Ele foi concluído durante a 1ª madrugada da CPRecife2 (17/07) e já está disponível no Firefox Marketplace e Google Play. Também possui um site para o webapp.  
+O app foi feito utilizando jQuery Mobile e PhoneGap. Ele foi concluï¿½do durante a 1ï¿½ madrugada da CPRecife2 (17/07) e jï¿½ estï¿½ disponï¿½vel no Firefox Marketplace e Google Play. Tambï¿½m possui um site para o webapp.  
 
 Firefox Marketplace  
 https://marketplace.firefox.com/app/vaichoverrecife  
