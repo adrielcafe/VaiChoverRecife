@@ -7,6 +7,7 @@
         "url": "http://adrielcafe.com"
     },
     "launch_path": "/index.html",
+    "appcache_path": "/offline.appcache",
     "installs_allowed_from": ["*"],
     "default_locale": "pt",
     "icons": {
