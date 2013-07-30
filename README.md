@@ -11,7 +11,7 @@ Vai Chover! Recife
 Vai Chover! Recife é um aplicativo que alerta a população do Recife sobre perigosas mudanças climáticas.  
 
 Vai Chover! Recife utiliza 3 fontes de dados abertos governamentais distintas. São elas:
-* fornecidos por um web service inédito que foi solicitado por mim a cerca de 2 semanas atrás.
+* Os alertas de chuva são dados abertos da APAC (Agência Pernambucana de Águas e Clima) fornecidos por um web service inédito.
 
 * O app exibe em um mapa as regiões do Recife (Região Norte, Sul, Sudeste...) organizados	por cores. Esses dados estão disponíveis no novo portal de dados abertos da Prefeitura do	Recife.
 
